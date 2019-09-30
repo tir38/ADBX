@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Rebooting device.... plz wait"
+
+adb reboot
+
+# wait for device to properly boot
+adb wait-for-device
+A=$(adb shell getprop sys.boot_completed | tr -d '\r')
+while [[ "$A" != "1" ]]; do
+sleep 1
+printf "."
+A=$(adb shell getprop sys.boot_completed | tr -d '\r')
+done
+
+echo "Done rebooting"
+

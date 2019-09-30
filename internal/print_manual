@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo
+echo "Usage: main [command]"
+echo "commands: "
+echo "   reboot:       reboot the device"
+echo "   max_bright:   set display to max brightness"

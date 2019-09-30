@@ -1,0 +1,13 @@
+#!/bin/bash
+
+command=$1
+
+case ${command} in
+    "reboot")
+        ./internal/reboot_and_wait
+        ;;
+    "max_bright")
+        echo "max_bright selected"
+        ;;
+    *) ./internal/print_manual
+esac
