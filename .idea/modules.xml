@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/adb_helper.iml" filepath="$PROJECT_DIR$/.idea/adb_helper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ax/.idea/ax.iml" filepath="$PROJECT_DIR$/../ax/.idea/ax.iml" />
     </modules>
   </component>
 </project>
