@@ -1,19 +1,30 @@
-## Objects
+# ADB Extensions (ADBX)
 
-1. tab completion
-2. command discovery:
+ADB commands are not always intuitive. They are also not easy to remember. There is also a lot of bad advice out there. ADBX hopes to solve that.
+
+## Objectives
+
+* tab completion
+* command discovery:
 
 	```
-$ adb restart
-Did you mean "adb reboot"?
-```
+	$ ax restart
+	Did you mean "ax reboot"?
+	```
 
-3. combining common operations into single scripts
-4. duplicate behavior on all connected devices. No more "more than one device found"
-5. Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
+* combining common operations into single scripts
+* duplicate behavior on all connected devices. No more "more than one device found"
+* Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
+* Encapsulating best practices. There are lots of hacky, half-correct suggestions on sites like Stack Overflow
 
 
-## Anti-patterns
+## Commands
 
-1. hacks, bodges, work arounds, or generally bad Stack Overflow answers.
+##### `$ ax max_bright`
+	
+Sets screen to maximum brightness
+
+##### `$ ax reboot`
+
+Reboots device
 
