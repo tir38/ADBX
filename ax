@@ -1,13 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env ruby
+require_relative "reboot_and_wait.rb"
+require_relative "print_manual.rb"
+require_relative "add_wifi_no_root.rb"
+require_relative "max_bright.rb"
 
-command=$1
-
-case ${command} in
-    "reboot")
-        ./internal/reboot_and_wait
-        ;;
-    "max_bright")
-        echo "max_bright selected"
-        ;;
-    *) ./internal/print_manual
-esac
+case ARGV[0]
+when "add_wifi"
+  add_wifi_no_root(ARGV[1], ARGV[2])
+when "reboot"
+  reboot_and_wait
+when "max_bright"
+  max_bright
+else
+  print_manual
+end

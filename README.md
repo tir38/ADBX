@@ -2,6 +2,7 @@
 
 ADB commands are not always intuitive. They are also not easy to remember. There is also a lot of bad advice out there. ADBX hopes to solve that.
 
+
 ## Objectives
 
 * tab completion
@@ -27,4 +28,8 @@ Sets screen to maximum brightness
 ##### `$ ax reboot`
 
 Reboots device
+
+##### `$ ax add_wifi SSID PASSWORD`
+
+Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
