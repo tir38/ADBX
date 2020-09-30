@@ -55,13 +55,13 @@ These scripts run as ruby commands. Install latest ruby 2.7.1
 1. update to latest Bash: [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
 2. install `bash-complete@2` [read more](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
-	```
-	$ brew install bash-completion@2
-	```
+```
+$ brew install bash-completion@2
+```
 
 3. update `~/.bashrc` by adding
 
-	```
+```
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 ```
