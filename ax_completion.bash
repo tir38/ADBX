@@ -1,4 +1,4 @@
-_ax() 
+_ax_completions() 
 {
     local cur prev opts
     COMPREPLY=()
@@ -12,4 +12,4 @@ _ax()
     	return 0
     fi
 }
-complete -F _ax ax
+complete -F _ax_completions ax
