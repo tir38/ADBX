@@ -5,7 +5,7 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 ## Objectives
 
-* Combining common operations into single scripts
+* Combine common operations into single commands
 * Tab completion
 * Command discovery:
 
@@ -16,7 +16,7 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 * Duplicate behavior on all connected devices. No more "more than one device found"
 * Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
-* Encapsulating best practices. There are lots of hacky, half-correct suggestions on sites like Stack Overflow
+* Encapsulating best practices. There are lots of hacky, half-correct suggestions floating around the internet.
 
 
 ## Progress
@@ -50,9 +50,11 @@ These scripts run as ruby commands. Install latest ruby 2.7.1
 ## Setup tab completion
 
 
-#### Mac OS pre-steps
+ADBX relies on Bash Completion 2. Read more about why [here](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
-1. update to latest Bash: [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
+#### MacOS pre-steps
+
+1. update to latest Bash (4+): [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
 2. install `bash-complete@2` [read more](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
 ```
@@ -68,15 +70,13 @@ export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 
 #### for all machines
 
-1. symlink completion script
+1. source both `ax` command and completion script. Add to `~/.bashrc`:
 
 ```
-ln -s [PATH_TO_THIS_REPO]/ax_bash_completion /usr/local/etc/bash_completion.d/ax
+export PATH=$PATH:path/to/ADBX
+source path/to/ADBX/ax_completion.bash
 ```
 
-2. confirm 
-
-```
-$ complete -p | grep ax
-complete -F _ax ax
-```
+2. open new terminal window
+3. `$ ax [TAB]`
+4. see list of completable actions
