@@ -49,6 +49,9 @@ Set screen to maximum brightness
 
 Reboot device
 
+##### `$ ax uninstall_package PACKAGE_NAME`
+
+Uninstalls package by name
 
 ## Setup
 

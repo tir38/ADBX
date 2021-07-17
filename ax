@@ -16,8 +16,9 @@ require_relative "list_packages.rb"
 require_relative "max_bright.rb"
 require_relative "print_manual.rb"
 require_relative "reboot_and_wait.rb"
+require_relative "uninstall_package.rb"
 
-known_commands = %w[add_wifi reboot max_bright list_packages help]
+known_commands = %w[add_wifi reboot max_bright list_packages help uninstall_package]
 
 case ARGV[0]
 when "add_wifi"
@@ -28,6 +29,8 @@ when "max_bright"
   max_bright
 when "list_packages"
   list_packages
+when "uninstall_package"
+  uninstall_package(ARGV[1])
 when "help"
   print_manual
 else
