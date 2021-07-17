@@ -8,10 +8,11 @@ gemfile do
   gem 'down', require: 'down'
 end
 
-require_relative "reboot_and_wait.rb"
-require_relative "print_manual.rb"
 require_relative "add_wifi_no_root.rb"
+require_relative "list_packages.rb"
 require_relative "max_bright.rb"
+require_relative "print_manual.rb"
+require_relative "reboot_and_wait.rb"
 
 case ARGV[0]
 when "add_wifi"
@@ -20,6 +21,8 @@ when "reboot"
   reboot_and_wait
 when "max_bright"
   max_bright
+when "list_packages"
+  list_packages
 else
   print_manual
 end
