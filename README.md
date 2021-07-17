@@ -31,21 +31,26 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 ## Commands
 
-##### `$ ax max_bright`
-	
-Sets screen to maximum brightness
-
-##### `$ ax reboot`
-
-Reboots device
-
 ##### `$ ax add_wifi SSID PASSWORD`
 
 Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
+##### `$ ax list_packages`
+
+List all installed packages (system and non-system)
+
+##### `$ ax max_bright`
+	
+Set screen to maximum brightness
+
+##### `$ ax reboot`
+
+Reboot device
+
+
 ## Setup
 
-These scripts run as ruby commands. Install latest ruby 2.7.1
+These scripts run as ruby commands. Install latest ruby 2.7.1 + 
 
 ## Setup tab completion
 
