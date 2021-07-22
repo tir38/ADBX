@@ -45,6 +45,13 @@ List all installed packages (system and non-system)
 	
 Set screen to maximum brightness
 
+
+##### `$ ax permissions PACKAGE`
+	
+List entire `dumpsys` for a package, with highlighting for <span style="color:green">granted</span> and <span style="color:red">not granted</span> permissions:
+
+![](images/permissiondump.png)
+
 ##### `$ ax reboot`
 
 Reboot device
