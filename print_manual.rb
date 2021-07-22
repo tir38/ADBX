@@ -6,5 +6,6 @@ def print_manual
   puts "   list_packages:   list all installed packages"
   puts "   max_bright:      set display to max brightness"
   puts "   reboot:          reboot the device"
+  puts "   settings_app:    start system settings app"
   puts "   uninstall_package [package]: remove installed package"
 end

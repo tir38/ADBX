@@ -49,6 +49,10 @@ Set screen to maximum brightness
 
 Reboot device
 
+##### `$ ax settings_app`
+
+Launch system Settings app
+
 ##### `$ ax uninstall_package PACKAGE_NAME`
 
 Uninstalls package by name

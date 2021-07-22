@@ -12,13 +12,14 @@ end
 
 require_relative "add_wifi_no_root.rb"
 require_relative "find_unknown_command.rb"
+require_relative "launch_system_settings_app.rb"
 require_relative "list_packages.rb"
 require_relative "max_bright.rb"
 require_relative "print_manual.rb"
 require_relative "reboot_and_wait.rb"
 require_relative "uninstall_package.rb"
 
-known_commands = %w[add_wifi reboot max_bright list_packages help uninstall_package]
+known_commands = %w[add_wifi reboot max_bright list_packages help settings_app uninstall_package]
 
 case ARGV[0]
 when "add_wifi"
@@ -33,6 +34,8 @@ when "uninstall_package"
   uninstall_package(ARGV[1])
 when "help"
   print_manual
+when "settings_app"
+  launch_system_settings_app
 else
   puts ARGV[0] + " is not an ADBX command. See 'ax help'."
   possible_commands = find_unknown_command(known_commands, ARGV[0])
