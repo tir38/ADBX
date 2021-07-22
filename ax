@@ -1,18 +1,23 @@
 #!/usr/bin/env ruby
 
-# grab gems for all sub-scripts
+# grab gems for all sub-scripts, without needing separate Gemfile
 require 'bundler/inline'
 
 gemfile do
   source 'https://rubygems.org'
+  gem 'damerau-levenshtein', require: 'damerau-levenshtein'
   gem 'down', require: 'down'
+  gem 'open3', require: "open3"
 end
 
 require_relative "add_wifi_no_root.rb"
+require_relative "find_unknown_command.rb"
 require_relative "list_packages.rb"
 require_relative "max_bright.rb"
 require_relative "print_manual.rb"
 require_relative "reboot_and_wait.rb"
+
+known_commands = %w[add_wifi reboot max_bright list_packages help]
 
 case ARGV[0]
 when "add_wifi"
@@ -23,6 +28,15 @@ when "max_bright"
   max_bright
 when "list_packages"
   list_packages
-else
+when "help"
   print_manual
+else
+  puts ARGV[0] + " is not an ADBX command. See 'ax help'."
+  possible_commands = find_unknown_command(known_commands, ARGV[0])
+  unless possible_commands.empty?
+    puts "Did you mean?"
+    possible_commands.each do |command|
+      puts "   " + command
+    end
+  end
 end

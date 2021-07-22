@@ -10,8 +10,10 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 * Command discovery:
 
 	```
-	$ ax restart
-	Did you mean "ax reboot"?
+	$ ax packges
+	packges is not an ADBX command. See 'ax help'.
+	Did you mean?
+     list_packages
 	```
 
 * Duplicate behavior on all connected devices. No more "more than one device found"
@@ -21,12 +23,12 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 ## Progress
 
-
-|   | completion |
-|---|------------|
-| tab completion |  X |
-| command discovery |            |
-| multiple devices |            |
+| feature | complete |
+|:---|:---:|
+| tab completion |X|
+| command discovery | X |
+| multiple devices | |
+| detect rooted devices | |
 
 
 ## Commands
