@@ -22,7 +22,15 @@ require_relative "uninstall_package.rb"
 
 known_commands = %w[add_wifi reboot max_bright list_packages help permissions settings_app uninstall_package]
 
-case ARGV[0]
+
+command = ARGV[0]
+
+if command == nil
+  print_manual
+  return
+end
+
+case command
 when "add_wifi"
   # TODO validate args
   add_wifi_no_root(ARGV[1], ARGV[2])
@@ -45,12 +53,12 @@ when "permissions"
   end
   list_all_permissions(ARGV[1])
 else
-  puts ARGV[0] + " is not an ADBX command. See 'ax help'."
-  possible_commands = find_unknown_command(known_commands, ARGV[0])
+  puts command + " is not an ADBX command. See 'ax help'."
+  possible_commands = find_unknown_command(known_commands, command)
   unless possible_commands.empty?
     puts "Did you mean?"
-    possible_commands.each do |command|
-      puts "   " + command
+    possible_commands.each do |possible_command|
+      puts "   " + possible_command
     end
   end
 end
