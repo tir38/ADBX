@@ -11,7 +11,7 @@ gemfile do
 end
 
 require_relative "add_wifi_no_root.rb"
-require_relative "find_unknown_command.rb"
+require_relative "find_unknown_value.rb"
 require_relative "launch_system_settings_app.rb"
 require_relative "list_packages.rb"
 require_relative "max_bright.rb"
@@ -21,7 +21,6 @@ require_relative "reboot_and_wait.rb"
 require_relative "uninstall_package.rb"
 
 known_commands = %w[add_wifi reboot max_bright list_packages help permissions settings_app uninstall_package]
-
 
 command = ARGV[0]
 
@@ -47,14 +46,10 @@ when "help"
 when "settings_app"
   launch_system_settings_app
 when "permissions"
-  if ARGV[1].to_s.empty?
-    puts "Failed to supply package. Correct syntax is 'ax permissions PACKAGE'"
-    return
-  end
   list_all_permissions(ARGV[1])
 else
   puts command + " is not an ADBX command. See 'ax help'."
-  possible_commands = find_unknown_command(known_commands, command)
+  possible_commands = find_unknown_value(known_commands, command)
   unless possible_commands.empty?
     puts "Did you mean?"
     possible_commands.each do |possible_command|
