@@ -1,8 +1,14 @@
+require_relative 'wait_for_boot_complete'
+
 def reboot_and_wait
-  puts "Rebooting device.... plz wait"
-  puts `adb reboot`
+  puts "Rebooting device. Please wait...."
+  Open3.capture2("adb reboot")
 
   # wait for device to properly boot
-  puts `./wait_for_boot_complete.sh`
-  puts "Done rebooting"
+  success = wait_for_boot_complete
+  if success
+    puts "Done rebooting"
+  else
+    puts "Failed to reboot"
+  end
 end
