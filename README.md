@@ -10,12 +10,20 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 * Command discovery:
 
 	```
-	$ ax packges
-	packges is not an ADBX command. See 'ax help'.
+	$ ax packages
+	packages is not an ADBX command. See 'ax help'.
 	Did you mean?
      list_packages
 	```
+* Package validation
 
+	```
+	$ ax uninstall_package myapp
+	Failed to find package: myapp
+	Did you mean?
+   		com.example.myapp
+   	```
+	
 * Duplicate behavior on all connected devices. No more "more than one device found"
 * Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
 * Encapsulating best practices. There are lots of hacky, half-correct suggestions floating around the internet.
@@ -27,6 +35,7 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 |:---|:---:|
 | tab completion |X|
 | command discovery | X |
+| package validation | X |
 | multiple devices | |
 | detect rooted devices | |
 

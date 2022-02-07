@@ -1,6 +1,6 @@
-require "open3"
+require_relative "get_packages"
 
 def list_packages
-  stdout_str, _ = Open3.capture2('adb shell pm list packages')
-  puts stdout_str
+  packages = get_packages
+  puts packages
 end
