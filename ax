@@ -28,11 +28,22 @@ matching_command = Commands::KNOWN_COMMANDS.find do |command|
 end
 
 if matching_command.nil?
+  # performs partial and Levenshtein
   possible_commands = find_unknown_value(Commands::KNOWN_COMMAND_NAMES, input_command)
+
+  # also search for "semantically similar"
+  Commands::KNOWN_COMMANDS.each do |command|
+    possible_commands << command.name if command.similar_sounding_commands&.include? input_command
+  end
+  # remove duplicates and sort from possible_commands
+  possible_commands = possible_commands
+                      .uniq
+                      .sort { |a, b| a <=> b }
+
   unless possible_commands.empty?
     puts 'Did you mean?'
     possible_commands.each do |command|
-      puts "   #{command}"
+      puts "   #{command}" # TODO: consider printing entire manual line for this command
     end
   end
   return

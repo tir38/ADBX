@@ -12,6 +12,6 @@ class MaxBright
   end
 
   def self.similar_sounding_commands
-    []
+    %w[screen display]
   end
 end

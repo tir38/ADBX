@@ -12,7 +12,5 @@ class ListPackages
     puts packages
   end
 
-  def self.similar_sounding_commands
-    []
-  end
+  def self.similar_sounding_commands; end
 end
