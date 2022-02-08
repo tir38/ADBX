@@ -1,15 +1,17 @@
-require "open3"
+# frozen_string_literal: true
+
+require 'open3'
 
 class MaxBright
   def self.name
-    "max_bright"
+    'max_bright'
   end
 
-  def self.perform(*args)
+  def self.perform(*_args)
     Open3.capture2('adb shell settings put system screen_brightness 255')
   end
 
-  def self.get_similar_sounding_commands
+  def self.similar_sounding_commands
     []
   end
 end

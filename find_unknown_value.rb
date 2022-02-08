@@ -1,4 +1,6 @@
-require "damerau-levenshtein"
+# frozen_string_literal: true
+
+require 'damerau-levenshtein'
 
 BEST_GUESS_DISTANCE = 10
 
@@ -13,9 +15,7 @@ def find_unknown_value(known_values, unknown_value)
   possible_partials = find_partials(unknown_value, known_values)
 
   # don't add levenshtein guess if already in partial list
-  if !possible_partials.include?(lev_best_guess) && lev_best_guess != ""
-    possible_partials.append(lev_best_guess)
-  end
+  possible_partials.append(lev_best_guess) if !possible_partials.include?(lev_best_guess) && lev_best_guess != ''
 
   possible_partials
 end
@@ -23,9 +23,7 @@ end
 def find_partials(unknown_command, known_commands)
   possible = []
   known_commands.each do |command|
-    if command.include? unknown_command
-      possible.append(command)
-    end
+    possible.append(command) if command.include? unknown_command
   end
   possible
 end
@@ -34,16 +32,16 @@ end
 def perform_levenshtein(unknown_command, known_commands)
   dl = DamerauLevenshtein
 
-  best_guess = ""
+  best_guess = ''
   best_guess_distance = -1
 
   known_commands.each do |command|
     guess_distance = dl.distance(command, unknown_command)
-    if best_guess.empty? || guess_distance <= best_guess_distance
-      best_guess = command
-      best_guess_distance = guess_distance
-      next
-    end
+    next unless best_guess.empty? || guess_distance <= best_guess_distance
+
+    best_guess = command
+    best_guess_distance = guess_distance
+    next
   end
 
   # Return empty string if best_guess_distance is really high
@@ -51,7 +49,6 @@ def perform_levenshtein(unknown_command, known_commands)
   if best_guess_distance < BEST_GUESS_DISTANCE
     best_guess
   else
-    ""
+    ''
   end
 end
-
