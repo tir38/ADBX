@@ -10,50 +10,32 @@ gemfile do
   gem 'open3', require: "open3"
 end
 
-require_relative "add_wifi_no_root.rb"
 require_relative "find_unknown_value.rb"
-require_relative "launch_system_settings_app.rb"
-require_relative "list_packages.rb"
-require_relative "max_bright.rb"
-require_relative "permissions"
 require_relative "print_manual.rb"
-require_relative "reboot_and_wait.rb"
-require_relative "uninstall_package.rb"
+require_relative "Commands.rb"
 
-known_commands = %w[add_wifi reboot max_bright list_packages help permissions settings_app uninstall_package]
+input_command = ARGV[0]
 
-command = ARGV[0]
-
-if command == nil
+if input_command == nil
   print_manual
   return
 end
 
-case command
-when "add_wifi"
-  # TODO validate args
-  add_wifi_no_root(ARGV[1], ARGV[2])
-when "reboot"
-  reboot_and_wait
-when "max_bright"
-  max_bright
-when "list_packages"
-  list_packages
-when "uninstall_package"
-  uninstall_package(ARGV[1])
-when "help"
-  print_manual
-when "settings_app"
-  launch_system_settings_app
-when "permissions"
-  list_all_permissions(ARGV[1])
-else
-  puts command + " is not an ADBX command. See 'ax help'."
-  possible_commands = find_unknown_value(known_commands, command)
+matching_command = Commands::KNOWN_COMMANDS.find { |command|
+  command.name == ARGV[0]
+}
+
+if matching_command == nil
+  possible_commands = find_unknown_value(Commands::KNOWN_COMMAND_NAMES, input_command)
   unless possible_commands.empty?
     puts "Did you mean?"
-    possible_commands.each do |possible_command|
-      puts "   " + possible_command
+    possible_commands.each do |command|
+      puts "   " + command
     end
   end
+  return
 end
+
+# strip command from ARGV and pass remaining
+other_args = ARGV.drop(1)
+matching_command.perform(*other_args) # convert array into arg list
