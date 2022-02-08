@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # grab gems for all sub-scripts, without needing separate Gemfile
 require 'bundler/inline'
@@ -7,30 +8,31 @@ gemfile do
   source 'https://rubygems.org'
   gem 'damerau-levenshtein', require: 'damerau-levenshtein'
   gem 'down', require: 'down'
-  gem 'open3', require: "open3"
+  gem 'open3', require: 'open3'
+  gem 'rubocop', require: false
 end
 
-require_relative "find_unknown_value.rb"
-require_relative "print_manual.rb"
-require_relative "Commands.rb"
+require_relative 'find_unknown_value'
+require_relative 'print_manual'
+require_relative 'Commands'
 
 input_command = ARGV[0]
 
-if input_command == nil
+if input_command.nil?
   print_manual
   return
 end
 
-matching_command = Commands::KNOWN_COMMANDS.find { |command|
+matching_command = Commands::KNOWN_COMMANDS.find do |command|
   command.name == ARGV[0]
-}
+end
 
-if matching_command == nil
+if matching_command.nil?
   possible_commands = find_unknown_value(Commands::KNOWN_COMMAND_NAMES, input_command)
   unless possible_commands.empty?
-    puts "Did you mean?"
+    puts 'Did you mean?'
     possible_commands.each do |command|
-      puts "   " + command
+      puts "   #{command}"
     end
   end
   return
