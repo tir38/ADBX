@@ -10,3 +10,5 @@ def print_manual
   puts "   settings_app:    start system settings app"
   puts "   uninstall_package [package]: remove installed package"
 end
+
+# TODO get manual entry from each command
