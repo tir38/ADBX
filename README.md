@@ -5,25 +5,19 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 ## Objectives
 
-* Combine common operations into single commands
 * Tab completion
+
+	![](tab_completion.gif)
+
 * Command discovery:
 
-	```
-	$ ax packages
-	packages is not an ADBX command. See 'ax help'.
-	Did you mean?
-     list_packages
-	```
+	![](command_discovery.gif)
+
 * Package validation
 
-	```
-	$ ax uninstall_package myapp
-	Failed to find package: myapp
-	Did you mean?
-   		com.example.myapp
-   	```
+	![](package_validation.gif)	
 	
+* Combine common operations into single commands
 * Duplicate behavior on all connected devices. No more "more than one device found"
 * Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
 * Encapsulating best practices. There are lots of hacky, half-correct suggestions floating around the internet.
