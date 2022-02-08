@@ -44,6 +44,6 @@ class AddWifi
   end
 
   def self.similar_sounding_commands
-    []
+    %w[internet network]
   end
 end

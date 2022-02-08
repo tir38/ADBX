@@ -10,6 +10,6 @@ class Help
   end
 
   def self.similar_sounding_commands
-    []
+    ['info']
   end
 end

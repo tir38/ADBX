@@ -21,6 +21,6 @@ class RebootAndWait
   end
 
   def self.similar_sounding_commands
-    []
+    ['restart']
   end
 end

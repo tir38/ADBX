@@ -19,7 +19,5 @@ class Permissions
     puts stdout
   end
 
-  def self.similar_sounding_commands
-    []
-  end
+  def self.similar_sounding_commands; end
 end

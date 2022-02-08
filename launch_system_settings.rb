@@ -10,6 +10,6 @@ class LaunchSystemSettings
   end
 
   def self.similar_sounding_commands
-    []
+    ['start']
   end
 end

@@ -14,6 +14,6 @@ class UninstallPackage
   end
 
   def self.similar_sounding_commands
-    []
+    ['remove', 'delete']
   end
 end
