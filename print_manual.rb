@@ -5,6 +5,7 @@ def print_manual
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
   puts '   help:            print this help manual'
+  puts '   layout_bounds [show|hide]:   show or hide layout bounds'
   puts '   list_packages:   list all installed packages'
   puts '   max_bright:      set display to max brightness'
   puts '   permissions [package]: list permissions for package (highlighted in larger dumpsys)'
@@ -13,4 +14,5 @@ def print_manual
   puts '   uninstall_package [package]: remove installed package'
 end
 
+# TODO: get this to line up nicely
 # TODO: get manual entry from each command
