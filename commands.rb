@@ -3,6 +3,7 @@
 require_relative 'add_wifi'
 require_relative 'help'
 require_relative 'launch_system_settings'
+require_relative 'launch_app'
 require_relative 'layout_bounds'
 require_relative 'list_packages'
 require_relative 'max_bright'
@@ -14,6 +15,7 @@ module Commands
   KNOWN_COMMANDS = [
     AddWifi,
     Help,
+    LaunchApp,
     LaunchSystemSettings,
     LayoutBounds,
     ListPackages,

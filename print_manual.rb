@@ -5,6 +5,7 @@ def print_manual
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
   puts '   help:            print this help manual'
+  puts '   launch_app [package]:  launch a specific application by package name'
   puts '   layout_bounds [show|hide]:   show or hide layout bounds'
   puts '   list_packages:   list all installed packages'
   puts '   max_bright:      set display to max brightness'
