@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Running all non-mutating (or easily reversible) commands"
+
+ax list_packages
+ax max_bright
+ax permissions com.android.settings
+ax settings_app
+ax reboot
