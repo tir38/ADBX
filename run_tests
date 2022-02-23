@@ -2,6 +2,8 @@
 
 echo "Running all non-mutating (or easily reversible) commands"
 
+ax layout_bounds show
+ax layout_bounds hide
 ax list_packages
 ax max_bright
 ax permissions com.android.settings
