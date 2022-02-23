@@ -40,6 +40,10 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
+##### `$ ax launch_app PACKAGE`
+
+Launch an app by package name
+
 ##### `$ ax layout_bounds show|hide`
 
 Show or hide layout bounds
@@ -51,7 +55,6 @@ List all installed packages (system and non-system)
 ##### `$ ax max_bright`
 	
 Set screen to maximum brightness
-
 
 ##### `$ ax permissions PACKAGE`
 	
