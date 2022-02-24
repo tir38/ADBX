@@ -4,7 +4,7 @@ _ax_completions()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="add_wifi reboot max_bright list_packages help permissions settings_app uninstall_package"
+    opts="add_wifi reboot max_bright list_packages help permissions settings_app uninstall_package pull_apks"
 
     # only tab complete second word in command string
     if [[ ${#COMP_WORDS[@]}  == 2 ]] ; then

@@ -8,6 +8,7 @@ require_relative 'layout_bounds'
 require_relative 'list_packages'
 require_relative 'max_bright'
 require_relative 'permissions'
+require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
 require_relative 'uninstall_package'
 
@@ -21,6 +22,7 @@ module Commands
     ListPackages,
     MaxBright,
     Permissions,
+    PullApks,
     RebootAndWait,
     UninstallPackage
   ].freeze

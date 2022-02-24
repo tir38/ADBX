@@ -62,6 +62,10 @@ List entire `dumpsys` for a package, with highlighting for <span style="color:gr
 
 ![](images/permissiondump.png)
 
+##### `$ ax pull_apks PACKAGE LOCATION`
+
+Pull all apks from device to local machine, for a given package. Optionally set location on local machine
+
 ##### `$ ax reboot`
 
 Reboot device

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Running all non-mutating (or easily reversible) commands"
 
 ax launch_app com.google.android.GoogleCamera # most likely app to have
@@ -8,5 +10,6 @@ ax layout_bounds hide
 ax list_packages
 ax max_bright
 ax permissions com.android.settings
+ax pull_apks com.android.settings ~/temp
 ax settings_app
 ax reboot
