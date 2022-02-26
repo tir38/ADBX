@@ -10,6 +10,7 @@ require_relative 'max_bright'
 require_relative 'permissions'
 require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
+require_relative 'screenshot'
 require_relative 'uninstall_package'
 
 module Commands
@@ -24,6 +25,7 @@ module Commands
     Permissions,
     PullApks,
     RebootAndWait,
+    Screenshot,
     UninstallPackage
   ].freeze
 

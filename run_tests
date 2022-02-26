@@ -11,5 +11,6 @@ ax list_packages
 ax max_bright
 ax permissions com.android.settings
 ax pull_apks com.android.settings ~/temp
+ax screenshot
 ax settings_app
 ax reboot
