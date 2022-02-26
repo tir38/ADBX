@@ -10,7 +10,9 @@ def print_manual
   puts '   list_packages:   list all installed packages'
   puts '   max_bright:      set display to max brightness'
   puts '   permissions [package]: list permissions for package (highlighted in larger dumpsys)'
+  puts '   pull_apks [destination] : download apks from device to optional destination or current directory'
   puts '   reboot:          reboot the device'
+  puts '   screenshot [destination] :   capture screenshot and save to optional destination or current directory'
   puts '   settings_app:    start system settings app'
   puts '   uninstall_package [package]: remove installed package'
 end

@@ -70,6 +70,10 @@ Pull all apks from device to local machine, for a given package. Optionally set 
 
 Reboot device
 
+##### `$ ax screenshot DESTINATION`
+
+Capture a device screenshot, saving to optional destination, or current directory with timestamp filename.
+
 ##### `$ ax settings_app`
 
 Launch system Settings app
@@ -83,7 +87,6 @@ Uninstalls package by name
 These scripts run as ruby commands. Install latest ruby 2.7.1 + 
 
 ## Setup tab completion
-
 
 ADBX relies on Bash Completion 2. Read more about why [here](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
