@@ -12,6 +12,7 @@ require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
 require_relative 'screenshot'
 require_relative 'uninstall_package'
+require_relative 'version_name'
 
 module Commands
   KNOWN_COMMANDS = [
@@ -26,7 +27,8 @@ module Commands
     PullApks,
     RebootAndWait,
     Screenshot,
-    UninstallPackage
+    UninstallPackage,
+    VersionName
   ].freeze
 
   KNOWN_COMMAND_NAMES = KNOWN_COMMANDS.map(&:name)

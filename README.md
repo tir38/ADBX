@@ -82,6 +82,10 @@ Launch system Settings app
 
 Uninstalls package by name
 
+##### `$ ax version_name PACKAGE_NAME`
+
+Print package's [version name](https://developer.android.com/guide/topics/manifest/manifest-element#vname)
+
 ## Setup
 
 These scripts run as ruby commands. Install latest ruby 2.7.1 + 

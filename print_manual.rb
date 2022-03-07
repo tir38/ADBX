@@ -15,6 +15,7 @@ def print_manual
   puts '   screenshot [destination] :   capture screenshot and save to optional destination or current directory'
   puts '   settings_app:    start system settings app'
   puts '   uninstall_package [package]: remove installed package'
+  puts '   version_name [package]: print package version name'
 end
 
 # TODO: get this to line up nicely
