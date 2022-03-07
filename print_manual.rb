@@ -4,6 +4,7 @@ def print_manual
   puts 'Usage: ax [command]'
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
+  puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   help:            print this help manual'
   puts '   launch_app [package]:  launch a specific application by package name'
   puts '   layout_bounds [show|hide]:   show or hide layout bounds'
