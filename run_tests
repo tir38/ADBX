@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Running all non-mutating (or easily reversible) commands"
+echo "Running all non-mutating (or easily reversible) commands:\n\n"
 
 ax launch_app com.google.android.GoogleCamera # most likely app to have
 ax layout_bounds show
@@ -13,5 +13,13 @@ ax permissions com.android.settings
 ax pull_apks com.android.settings ~/temp
 ax screenshot
 ax settings_app
-ax version_name
+ax version_name com.android.settings
+ax disable_audio voice_call
+ax disable_audio system
+ax disable_audio ring
+ax disable_audio music
+ax disable_audio alarm
+ax disable_audio notification
+ax disable_audio dtmf
+ax disable_audio accessibility
 ax reboot
