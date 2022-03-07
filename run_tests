@@ -13,4 +13,5 @@ ax permissions com.android.settings
 ax pull_apks com.android.settings ~/temp
 ax screenshot
 ax settings_app
+ax version_name
 ax reboot
