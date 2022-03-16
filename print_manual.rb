@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+# remove rubocop suppression when we fix https://github.com/tir38/ADBX/issues/64
+# rubocop:disable Metrics/AbcSize
 def print_manual
   puts 'Usage: ax [command]'
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
+  puts '   clear_app_data [package]:   clear app data, including cache and accepted permissions'
   puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   help:            print this help manual'
   puts '   launch_app [package]:  launch a specific application by package name'
@@ -19,6 +22,5 @@ def print_manual
   puts '   uninstall_package [package]: remove installed package'
   puts '   version_name [package]: print package version name'
 end
-
+# rubocop:enable Metrics/AbcSize
 # TODO: get this to line up nicely
-# TODO: get manual entry from each command

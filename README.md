@@ -40,6 +40,10 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
+##### `$ ax clear_app_data PACKAGE`
+
+Clear all app data, including cache and accepted permissions
+
 ##### `$ ax disable_audio AUDIO_STREAM`
 
 Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:

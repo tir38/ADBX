@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'add_wifi'
+require_relative 'clear_app_data'
 require_relative 'disable_audio'
 require_relative 'help'
 require_relative 'launch_system_settings'
@@ -19,6 +20,7 @@ require_relative 'version_name'
 module Commands
   KNOWN_COMMANDS = [
     AddWifi,
+    ClearAppData,
     DisableAudio,
     Help,
     LaunchApp,
