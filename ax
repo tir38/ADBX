@@ -12,6 +12,7 @@ gemfile do
   gem 'rubocop', require: false
 end
 
+require_relative 'check_devices'
 require_relative 'find_unknown_value'
 require_relative 'print_manual'
 require_relative 'Commands'
@@ -48,6 +49,9 @@ if matching_command.nil?
   end
   return
 end
+
+# perform device check
+return unless check_devices
 
 # strip command from ARGV and pass remaining
 other_args = ARGV.drop(1)
