@@ -8,6 +8,7 @@ require_relative 'launch_app'
 require_relative 'layout_bounds'
 require_relative 'list_packages'
 require_relative 'max_bright'
+require_relative 'night_mode'
 require_relative 'permissions'
 require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
@@ -25,6 +26,7 @@ module Commands
     LayoutBounds,
     ListPackages,
     MaxBright,
+    NightMode,
     Permissions,
     PullApks,
     RebootAndWait,

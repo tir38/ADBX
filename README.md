@@ -69,6 +69,10 @@ List all installed packages (system and non-system)
 	
 Set screen to maximum brightness
 
+##### `$ ax night_mode on|off|auto`
+
+Set devices night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device's current location and certain other sensors"
+
 ##### `$ ax permissions PACKAGE`
 	
 List entire `dumpsys` for a package, with highlighting for <span style="color:green">granted</span> and <span style="color:red">not granted</span> permissions:
