@@ -11,7 +11,7 @@ def wait_for_boot_complete
   until x.start_with?('1')
     print '.'
     if count > TIMEOUT / WAIT_CYCLE
-      puts 'Timed out waiting for reboot'
+      puts "\nTimed out waiting for reboot"
       return false
     end
 
@@ -19,5 +19,6 @@ def wait_for_boot_complete
     count += 1
     x, = Open3.capture2('adb shell getprop sys.boot_completed')
   end
+  puts "\n"
   true
 end
