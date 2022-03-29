@@ -57,6 +57,10 @@ Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:
  * system
  * voice_call
 
+##### `$ ax display`
+
+Print device's display size and density
+
 ##### `$ ax launch_app PACKAGE`
 
 Launch an app by package name
