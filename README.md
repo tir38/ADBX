@@ -18,8 +18,7 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 	![](package_validation.gif)	
 	
 * Combine common operations into single commands
-* Duplicate behavior on all connected devices. No more "more than one device found"
-* Detecting rooted devices. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
+* Detecting rooted device. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
 * Encapsulating best practices. There are lots of hacky, half-correct suggestions floating around the internet.
 
 
@@ -30,7 +29,6 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 | tab completion |X|
 | command discovery | X |
 | package validation | X |
-| multiple devices | |
 | detect rooted devices | |
 
 
@@ -79,7 +77,7 @@ Set screen to maximum brightness
 
 ##### `$ ax night_mode on|off|auto`
 
-Set devices night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device's current location and certain other sensors"
+Set device night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device current location and certain other sensors"
 
 ##### `$ ax permissions PACKAGE`
 	
