@@ -12,6 +12,7 @@ require_relative 'list_packages'
 require_relative 'max_bright'
 require_relative 'night_mode'
 require_relative 'permissions'
+require_relative 'processor'
 require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
 require_relative 'screenshot'
@@ -32,6 +33,7 @@ module Commands
     MaxBright,
     NightMode,
     Permissions,
+    Processor,
     PullApks,
     RebootAndWait,
     Screenshot,
