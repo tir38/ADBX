@@ -16,6 +16,7 @@ def print_manual
   puts '   max_bright:      set display to max brightness'
   puts '   night mode [on|off|auto]:      turn device night mode to on, off, or auto'
   puts '   permissions [package]: list permissions for package (highlighted in larger dumpsys)'
+  puts '   processor : print information about deivce processor(s)'
   puts '   pull_apks [destination] : download apks from device to optional destination or current directory'
   puts '   reboot:          reboot the device'
   puts '   screenshot [destination] :   capture screenshot and save to optional destination or current directory'

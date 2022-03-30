@@ -87,6 +87,10 @@ List entire `dumpsys` for a package, with highlighting for <span style="color:gr
 
 ![](images/permissiondump.png)
 
+##### `$ ax processor`
+
+Print information on device's processor(s)
+
 ##### `$ ax pull_apks PACKAGE LOCATION`
 
 Pull all apks from device to local machine, for a given package. Optionally set location on local machine
@@ -103,11 +107,11 @@ Capture a device screenshot, saving to optional destination, or current director
 
 Launch system Settings app
 
-##### `$ ax uninstall_package PACKAGE_NAME`
+##### `$ ax uninstall_package PACKAGE`
 
 Uninstalls package by name
 
-##### `$ ax version_name PACKAGE_NAME`
+##### `$ ax version_name PACKAGE`
 
 Print package's [version name](https://developer.android.com/guide/topics/manifest/manifest-element#vname)
 

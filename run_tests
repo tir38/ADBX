@@ -26,4 +26,5 @@ ax night_mode on
 ax night_mode off
 ax night_mode auto
 ax display
+ax processor
 ax reboot
