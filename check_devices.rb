@@ -16,6 +16,7 @@ def check_devices
   return if unauthoried_device?(output_array)
 
   # check for offline device and wait
+  device = output_array[0]
   if device.include?('offline')
     puts 'Device is currently offline and is likely rebooting. Will try when finished booting'
     return wait_for_boot_complete
