@@ -21,6 +21,7 @@ def print_manual
   puts '   reboot:          reboot the device'
   puts '   screenshot [destination] :   capture screenshot and save to optional destination or current directory'
   puts '   settings_app:    start system settings app'
+  puts '   talkback [on|off]:      turn Talkback on or off'
   puts '   uninstall_package [package]: remove installed package'
   puts '   version_name [package]: print package version name'
 end

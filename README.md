@@ -107,6 +107,10 @@ Capture a device screenshot, saving to optional destination, or current director
 
 Launch system Settings app
 
+##### `$ ax talkback on|off`
+
+Set Talkback on or off
+
 ##### `$ ax uninstall_package PACKAGE`
 
 Uninstalls package by name

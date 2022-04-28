@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Running all non-mutating (or easily reversible) commands:\n\n"
+printf "\nRunning all non-mutating (or easily reversible) commands:\n\n"
 
 ax launch_app com.google.android.GoogleCamera # most likely app to have
 ax layout_bounds show
@@ -27,4 +27,7 @@ ax night_mode off
 ax night_mode auto
 ax display
 ax processor
+ax talkback on
+sleep 3
+ax talkback off
 ax reboot

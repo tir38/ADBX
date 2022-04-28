@@ -4,7 +4,7 @@ _ax_completions()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    primary_opts="add_wifi clear_app_data disable_audio display launch_app layout_bounds list_packages help max_bright night_mode permissions processor pull_apks reboot screenshot, settings_app uninstall_package version_name"
+    primary_opts="add_wifi clear_app_data disable_audio display launch_app layout_bounds list_packages help max_bright night_mode permissions processor pull_apks reboot screenshot settings_app talkback uninstall_package version_name"
 
     #remember: COMP_WORDS[0] is `ax`
     # tab complete primary word in command string

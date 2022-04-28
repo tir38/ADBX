@@ -16,6 +16,7 @@ require_relative 'processor'
 require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
 require_relative 'screenshot'
+require_relative 'talkback'
 require_relative 'uninstall_package'
 require_relative 'version_name'
 
@@ -37,6 +38,7 @@ module Commands
     PullApks,
     RebootAndWait,
     Screenshot,
+    Talkback,
     UninstallPackage,
     VersionName
   ].freeze
