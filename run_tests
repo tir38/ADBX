@@ -30,4 +30,9 @@ ax processor
 ax talkback on
 sleep 3
 ax talkback off
+ax font_scale small
+ax font_scale default
+ax font_scale large
+ax font_scale largest
+ax font_scale default
 ax reboot
