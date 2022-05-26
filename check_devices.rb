@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'ruby_utils'
 require_relative 'wait_for_boot_complete'
 
 def check_devices
@@ -7,8 +8,7 @@ def check_devices
   stdout_str, = Open3.capture2('adb devices -l')
 
   output_array = stdout_str
-                 .split("\n")
-                 .reject(&:empty?)
+                 .as_array
                  .reject { |line| line.include?('List of devices attached') }
 
   return if more_than_one_device?(output_array)
