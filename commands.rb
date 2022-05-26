@@ -4,6 +4,7 @@ require_relative 'add_wifi'
 require_relative 'clear_app_data'
 require_relative 'disable_audio'
 require_relative 'display'
+require_relative 'display_scale'
 require_relative 'font_scale'
 require_relative 'help'
 require_relative 'launch_system_settings'
@@ -27,6 +28,7 @@ module Commands
     ClearAppData,
     DisableAudio,
     Display,
+    DisplayScale,
     FontScale,
     Help,
     LaunchApp,

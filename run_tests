@@ -35,4 +35,10 @@ ax font_scale default
 ax font_scale large
 ax font_scale largest
 ax font_scale default
+ax display_scale small
+ax display_scale default
+ax display_scale large
+ax display_scale larger
+ax display_scale largest
+ax display_scale default
 ax reboot
