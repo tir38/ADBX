@@ -9,6 +9,7 @@ def print_manual
   puts '   clear_app_data [package]:   clear app data, including cache and accepted permissions'
   puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   display:   print display size and density'
+  puts '   display_scale [small|default|large|larger|laergest]:   sets accessibility display scale'
   puts '   font_scale [small|default|large|largest]:  sets accessibility font scale'
   puts '   help:            print this help manual'
   puts '   launch_app [package]:  launch a specific application by package name'

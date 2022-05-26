@@ -59,9 +59,13 @@ Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:
 
 Print device's display size and density
 
+##### `$ ax display_scale small|default|large|larger|largest`
+
+Set display scale. Mimics small, default, large, larger, largest options as if set from system Settings app.
+
 ##### `$ ax font_scale small|default|large|largest`
 
-Set accessibility font scale. Mimics small, default, large, largest options as if set from system Setttings app.
+Set accessibility font scale. Mimics small, default, large, largest options as if set from system Settings app.
 
 ##### `$ ax launch_app PACKAGE`
 
