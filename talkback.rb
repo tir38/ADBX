@@ -9,16 +9,17 @@ class Talkback
     input = args[0]
     return unless validate_input(input)
 
-    if input == "on"
+    case input
+    when 'on'
       Open3.capture2('adb shell settings put secure enabled_accessibility_services com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService')
-    elsif input == "off"
+    when 'off'
       Open3.capture2('adb shell settings put secure enabled_accessibility_services com.android.talkback/com.google.android.marvin.talkback.TalkBackService')
     end
   end
 
   def self.validate_input(input)
-    if input.nil? || (input != "off" && input != "on")
-      puts "Invalid input. Options are: on off"
+    if input.nil? || (input != 'off' && input != 'on')
+      puts 'Invalid input. Options are: on off'
       return false
     end
     true
