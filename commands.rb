@@ -7,6 +7,7 @@ require_relative 'display'
 require_relative 'display_scale'
 require_relative 'font_scale'
 require_relative 'help'
+require_relative 'Install'
 require_relative 'launch_system_settings'
 require_relative 'launch_app'
 require_relative 'layout_bounds'
@@ -31,6 +32,7 @@ module Commands
     DisplayScale,
     FontScale,
     Help,
+    Install,
     LaunchApp,
     LaunchSystemSettings,
     LayoutBounds,
