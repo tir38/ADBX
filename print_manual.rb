@@ -12,6 +12,7 @@ def print_manual
   puts '   display_scale [small|default|large|larger|laergest]:   sets accessibility display scale'
   puts '   font_scale [small|default|large|largest]:  sets accessibility font scale'
   puts '   help:            print this help manual'
+  puts '   install [path to apk]:            install apk at path'
   puts '   launch_app [package]:  launch a specific application by package name'
   puts '   layout_bounds [show|hide]:   show or hide layout bounds'
   puts '   list_packages:   list all installed packages'
