@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'packages'
+require_relative 'check_rooted'
 require 'open3'
 
 class ClearAppData
@@ -9,6 +10,8 @@ class ClearAppData
   end
 
   def self.perform(*args)
+    return unless check_rooted # TODO: temp remove
+
     package_name = args[0]
     return unless validate_package(package_name)
 
