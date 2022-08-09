@@ -38,6 +38,10 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
+##### `$ ax airplane_mode on|off`
+
+Sets airplane mode to on or off. Non-rooted devices will require a reboot.
+
 ##### `$ ax clear_app_data PACKAGE`
 
 Clear all app data, including cache and accepted permissions

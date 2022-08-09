@@ -6,6 +6,7 @@ def print_manual
   puts 'Usage: ax [command]'
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
+  puts '   airplane_mode [on|off]:   turn airplane mode on or off'
   puts '   clear_app_data [package]:   clear app data, including cache and accepted permissions'
   puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   display:   print display size and density'
