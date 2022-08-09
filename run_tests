@@ -41,4 +41,8 @@ ax display_scale large
 ax display_scale larger
 ax display_scale largest
 ax display_scale default
+ax airplane_mode on
+sleep 3
+ax airplane_mode off
+sleep 3
 ax reboot
