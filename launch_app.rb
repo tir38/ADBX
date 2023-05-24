@@ -14,7 +14,8 @@ class LaunchApp
     # https://developer.android.com/studio/test/other-testing-tools/monkey
     # use monkey to send a single random event to app
     # For some reason monkey will output some data to stderr, use capture3 to also grab that (i.e. show nothing to user)
-    Open3.capture3("adb shell monkey -p #{package_name} 1")
+    #  --pct-syskeys 0  ensures this will work for devices with no physical keys
+    Open3.capture3("adb shell monkey --pct-syskeys 0 -p #{package_name} 1")
   end
 
   def self.similar_sounding_commands
