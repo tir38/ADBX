@@ -2,11 +2,13 @@
 
 # remove rubocop suppression when we fix https://github.com/tir38/ADBX/issues/64
 # rubocop:disable Metrics/AbcSize
+# rubocop:disable Layout/LineLength
 def print_manual
   puts 'Usage: ax [command]'
   puts 'commands: '
   puts '   add_wifi [ssid] [password]:   add wifi to network configs'
   puts '   airplane_mode [on|off]:   turn airplane mode on or off'
+  puts '   animation_scale [off|0.5|1|1.5|2|5|10|resest]:   sets window animation scale, transition animation scale, and animation duration scale'
   puts '   clear_app_data [package]:   clear app data, including cache and accepted permissions'
   puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   display:   print display size and density'
@@ -29,4 +31,5 @@ def print_manual
   puts '   version_name [package]: print package version name'
 end
 # rubocop:enable Metrics/AbcSize
+# rubocop:enable Layout/LineLength
 # TODO: get this to line up nicely

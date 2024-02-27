@@ -2,6 +2,7 @@
 
 require_relative 'add_wifi'
 require_relative 'airplane_mode'
+require_relative 'animation_scale'
 require_relative 'clear_app_data'
 require_relative 'disable_audio'
 require_relative 'display'
@@ -27,6 +28,7 @@ module Commands
   KNOWN_COMMANDS = [
     AddWifi,
     AirplaneMode,
+    AnimationScale,
     ClearAppData,
     DisableAudio,
     Display,

@@ -4,7 +4,7 @@ _ax_completions()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    primary_opts="add_wifi airplane_mode clear_app_data disable_audio display display_scale font_scale launch_app layout_bounds list_packages help max_bright night_mode permissions processor pull_apks reboot screenshot settings_app talkback uninstall_package version_name"
+    primary_opts="add_wifi airplane_mode animation_scale clear_app_data disable_audio display display_scale font_scale launch_app layout_bounds list_packages help max_bright night_mode permissions processor pull_apks reboot screenshot settings_app talkback uninstall_package version_name"
 
     #remember: COMP_WORDS[0] is `ax`
     # tab complete primary word in command string
@@ -12,6 +12,13 @@ _ax_completions()
 	    COMPREPLY=( $(compgen -W "${primary_opts}" -- ${cur}) )
     	return 0
     fi
+
+    # secondary tab completion for animation_scale
+    animation_scale_opts="off 0.5 1 1.5 2 5 10 reset"
+      if [[ ${#COMP_WORDS[@]}  == 3  && ${COMP_WORDS[1]}  == "animation_scale" ]] ; then
+        COMPREPLY=( $(compgen -W "${animation_scale_opts}" -- ${cur}) )
+        return 0
+      fi
 
     # secondary tab completion for disable_audio
     disable_audio_opts="voice_call system ring music alarm notification dtfm accessibility"
