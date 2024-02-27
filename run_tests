@@ -41,6 +41,17 @@ ax display_scale large
 ax display_scale larger
 ax display_scale largest
 ax display_scale default
+
+printf "\n\n=== Testing animation_scale: ====== \n\n"
+ax animation_scale off
+ax animation_scale 0.5
+ax animation_scale 1
+ax animation_scale 1.5
+ax animation_scale 2
+ax animation_scale 5
+ax animation_scale 10
+ax animation_scale reset
+# always do this last
 ax airplane_mode on
 sleep 3
 ax airplane_mode off

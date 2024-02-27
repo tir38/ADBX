@@ -15,8 +15,8 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 * Package validation
 
-	![](package_validation.gif)	
-	
+	![](package_validation.gif)
+
 * Combine common operations into single commands
 * Detecting rooted device. Some operations can't be performed on non-rooted devices. We'll detect that before running commands
 * Encapsulating best practices. There are lots of hacky, half-correct suggestions floating around the internet.
@@ -41,6 +41,10 @@ Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https:
 ##### `$ ax airplane_mode on|off`
 
 Sets airplane mode to on or off. Non-rooted devices will require a reboot.
+
+##### `$ ax animation_scale off|0.5|1|1.5|2|5|10|resest`
+
+Sets window animation scale, transition animation scale, and animator duration scale.
 
 ##### `$ ax clear_app_data PACKAGE`
 
@@ -84,7 +88,7 @@ Show or hide layout bounds
 List all installed packages (system and non-system)
 
 ##### `$ ax max_bright`
-	
+
 Set screen to maximum brightness
 
 ##### `$ ax night_mode on|off|auto`
@@ -92,7 +96,7 @@ Set screen to maximum brightness
 Set device night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device current location and certain other sensors"
 
 ##### `$ ax permissions PACKAGE`
-	
+
 List entire `dumpsys` for a package, with highlighting for <span style="color:green">granted</span> and <span style="color:red">not granted</span> permissions:
 
 ![](images/permissiondump.png)
@@ -131,7 +135,7 @@ Print package's [version name](https://developer.android.com/guide/topics/manife
 
 ## Setup
 
-These scripts run as ruby commands. Install latest ruby 2.7.1 + 
+These scripts run as ruby commands. Install latest ruby 2.7.1 +
 
 ## Setup tab completion
 
