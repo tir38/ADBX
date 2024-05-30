@@ -121,6 +121,18 @@ Capture a device screenshot, saving to optional destination, or current director
 
 Launch system Settings app
 
+##### `$ ax shared_prefs list PACKAGE`
+
+List all shared preferences files within a package
+
+##### `$ ax shared_prefs list PACKAGE FILE_NAME`
+
+Print the content of a single shared preferences file within a single package
+
+##### `$ ax shared_prefs remove PACKAGE FILE_NAME PREF_NAME`
+
+Remove a single value from a shared preferences file
+
 ##### `$ ax talkback on|off`
 
 Set Talkback on or off

@@ -20,6 +20,7 @@ require_relative 'processor'
 require_relative 'pull_apks'
 require_relative 'reboot_and_wait'
 require_relative 'screenshot'
+require_relative 'shared_prefs'
 require_relative 'talkback'
 require_relative 'uninstall_package'
 require_relative 'version_name'
@@ -46,6 +47,7 @@ module Commands
     PullApks,
     RebootAndWait,
     Screenshot,
+    SharedPrefs,
     Talkback,
     UninstallPackage,
     VersionName
