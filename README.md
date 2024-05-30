@@ -34,23 +34,23 @@ ADB commands are not always intuitive. They are also not easy to remember. There
 
 ## Commands
 
-##### `$ ax add_wifi SSID PASSWORD`
+### `ax add_wifi SSID PASSWORD`
 
 Setup wifi connection. This downloads, installs, and runs [adb-join-wifi](https://github.com/steinwurf/adb-join-wifi)
 
-##### `$ ax airplane_mode on|off`
+### `ax airplane_mode on|off`
 
 Sets airplane mode to on or off. Non-rooted devices will require a reboot.
 
-##### `$ ax animation_scale off|0.5|1|1.5|2|5|10|resest`
+### `ax animation_scale off|0.5|1|1.5|2|5|10|resest`
 
 Sets window animation scale, transition animation scale, and animator duration scale.
 
-##### `$ ax clear_app_data PACKAGE`
+### `ax clear_app_data PACKAGE`
 
 Clear all app data, including cache and accepted permissions
 
-##### `$ ax disable_audio AUDIO_STREAM`
+### `ax disable_audio AUDIO_STREAM`
 
 Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:
 
@@ -63,85 +63,85 @@ Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:
  * system
  * voice_call
 
-##### `$ ax display`
+### `ax display`
 
 Print device's display size and density
 
-##### `$ ax display_scale small|default|large|larger|largest`
+### `ax display_scale small|default|large|larger|largest`
 
 Set display scale. Mimics small, default, large, larger, largest options as if set from system Settings app.
 
-##### `$ ax font_scale small|default|large|largest`
+### `ax font_scale small|default|large|largest`
 
 Set accessibility font scale. Mimics small, default, large, largest options as if set from system Settings app.
 
-##### `$ ax launch_app PACKAGE`
+### `ax launch_app PACKAGE`
 
 Launch an app by package name
 
-##### `$ ax layout_bounds show|hide`
+### `ax layout_bounds show|hide`
 
 Show or hide layout bounds
 
-##### `$ ax list_packages`
+### `ax list_packages`
 
 List all installed packages (system and non-system)
 
-##### `$ ax max_bright`
+### `ax max_bright`
 
 Set screen to maximum brightness
 
-##### `$ ax night_mode on|off|auto`
+### `ax night_mode on|off|auto`
 
 Set device night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device current location and certain other sensors"
 
-##### `$ ax permissions PACKAGE`
+### `ax permissions PACKAGE`
 
 List entire `dumpsys` for a package, with highlighting for <span style="color:green">granted</span> and <span style="color:red">not granted</span> permissions:
 
 ![](images/permissiondump.png)
 
-##### `$ ax processor`
+### `ax processor`
 
 Print information on device's processor(s)
 
-##### `$ ax pull_apks PACKAGE LOCATION`
+### `ax pull_apks PACKAGE LOCATION`
 
 Pull all apks from device to local machine, for a given package. Optionally set location on local machine
 
-##### `$ ax reboot`
+### `ax reboot`
 
 Reboot device
 
-##### `$ ax screenshot DESTINATION`
+### `ax screenshot DESTINATION`
 
 Capture a device screenshot, saving to optional destination, or current directory with timestamp filename.
 
-##### `$ ax settings_app`
+### `ax settings_app`
 
 Launch system Settings app
 
-##### `$ ax shared_prefs list PACKAGE`
+### `ax shared_prefs list PACKAGE`
 
 List all shared preferences files within a package
 
-##### `$ ax shared_prefs list PACKAGE FILE_NAME`
+### `ax shared_prefs list PACKAGE FILE_NAME`
 
 Print the content of a single shared preferences file within a single package
 
-##### `$ ax shared_prefs remove PACKAGE FILE_NAME PREF_NAME`
+### `ax shared_prefs remove PACKAGE FILE_NAME PREF_NAME`
 
 Remove a single value from a shared preferences file
 
-##### `$ ax talkback on|off`
+### `ax talkback on|off`
 
 Set Talkback on or off
 
-##### `$ ax uninstall_package PACKAGE`
+### `ax uninstall_package PACKAGE`
 
 Uninstalls package by name
 
-##### `$ ax version_name PACKAGE`
+### `ax version_name PACKAGE`
 
 Print package's [version name](https://developer.android.com/guide/topics/manifest/manifest-element#vname)
 
