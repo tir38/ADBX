@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 # grab gems for all sub-scripts, without needing separate Gemfile
+Gem.paths = { "GEM_HOME" => Gem.user_dir } # force bundler to use user dir, not system dir
 require 'bundler/inline'
 
 gemfile do

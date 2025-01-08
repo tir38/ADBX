@@ -147,7 +147,9 @@ Print package's [version name](https://developer.android.com/guide/topics/manife
 
 ## Setup
 
-These scripts run as ruby commands. Install latest ruby 2.7.1 +
+These scripts run as ruby commands. Install latest ruby 3.x. Known working versions:
+
+* Ruby 3.4.1
 
 ## Setup tab completion
 
