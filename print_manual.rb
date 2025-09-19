@@ -10,6 +10,7 @@ def print_manual
   puts '   airplane_mode [on|off]:   turn airplane mode on or off'
   puts '   animation_scale [off|0.5|1|1.5|2|5|10|resest]:   sets window animation scale, transition animation scale, and animation duration scale'
   puts '   clear_app_data [package]:   clear app data, including cache and accepted permissions'
+  puts '   demo_mode [on|off]:   turn demo mode on or off'
   puts '   disable_audio [audio_stream]:   lower a specific audio stream volume to zero'
   puts '   display:   print display size and density'
   puts '   display_scale [small|default|large|larger|laergest]:   sets accessibility display scale'

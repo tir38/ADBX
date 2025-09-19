@@ -7,6 +7,7 @@
 ## Adding New Function
 
 - [ ] I have added to README
+- [ ] I have added to `print_manual.rb`
 - [ ] I have added to `commands.rb KNOWN_COMMANDS`
 - [ ] I have added to `run_tests`
 - [ ] I have added to `ax_completion.bash`

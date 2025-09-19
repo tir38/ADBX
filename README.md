@@ -50,6 +50,10 @@ Sets window animation scale, transition animation scale, and animator duration s
 
 Clear all app data, including cache and accepted permissions
 
+### `$ ax demo_mode on|off`
+
+Toggles on or off System UI Demo Mode
+
 ### `ax disable_audio AUDIO_STREAM`
 
 Disable device's audio, per stream. Supports all `AudioManager.STREAM_*`:
