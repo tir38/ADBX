@@ -39,7 +39,7 @@ def unauthoried_device?(output_array)
 end
 
 def no_devices?(output_array)
-  if output_array.size.zero?
+  if output_array.empty?
     puts 'No devices or emulators found. Connect a single device or run a single emulator then retry.'
     return true
   end

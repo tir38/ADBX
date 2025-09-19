@@ -3,3 +3,7 @@ Style/Documentation:
 
 Metrics/MethodLength:
   Enabled: false
+
+Layout/LineLength:
+  Max: 999
+
