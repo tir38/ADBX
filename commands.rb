@@ -4,6 +4,7 @@ require_relative 'add_wifi'
 require_relative 'airplane_mode'
 require_relative 'animation_scale'
 require_relative 'clear_app_data'
+require_relative 'demo_mode'
 require_relative 'disable_audio'
 require_relative 'display'
 require_relative 'display_scale'
@@ -31,6 +32,7 @@ module Commands
     AirplaneMode,
     AnimationScale,
     ClearAppData,
+    DemoMode,
     DisableAudio,
     Display,
     DisplayScale,
