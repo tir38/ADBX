@@ -11,7 +11,7 @@ class Screenshot
   def self.perform(*args)
     input_destination = args[0]
 
-    destination = if input_destination.nil? || input_destination.length.zero?
+    destination = if input_destination.nil? || input_destination.empty?
                     "#{Time.now.localtime.strftime('%Y-%m-%d-%H-%M-%S')}.png"
                   else
                     input_destination

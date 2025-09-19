@@ -2,7 +2,6 @@
 
 # remove rubocop suppression when we fix https://github.com/tir38/ADBX/issues/64
 # rubocop:disable Metrics/AbcSize
-# rubocop:disable Layout/LineLength
 def print_manual
   puts 'Usage: ax [command]'
   puts 'commands: '
@@ -32,5 +31,4 @@ def print_manual
   puts '   version_name [package]: print package version name'
 end
 # rubocop:enable Metrics/AbcSize
-# rubocop:enable Layout/LineLength
 # TODO: get this to line up nicely
