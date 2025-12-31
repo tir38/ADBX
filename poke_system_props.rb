@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 def poke_system_props
   # Any time we setprops, we have to poke the system to get change to register
   # 1599295570 maps to SYSPROPS_TRANSACTION

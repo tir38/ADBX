@@ -2,7 +2,6 @@
 
 require 'down'
 require 'fileutils'
-require 'open3'
 
 class AddWifi
   def self.name

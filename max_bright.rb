@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 class MaxBright
   def self.name
     'max_bright'

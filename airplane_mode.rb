@@ -2,7 +2,6 @@
 
 require_relative 'packages'
 require_relative 'check_rooted'
-require 'open3'
 
 class AirplaneMode
   def self.name
