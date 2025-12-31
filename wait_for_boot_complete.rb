@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 TIMEOUT = 60 # seconds
 WAIT_CYCLE = 1 # seconds
 def wait_for_boot_complete

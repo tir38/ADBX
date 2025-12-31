@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
 require_relative 'poke_system_props'
 
 class LayoutBounds

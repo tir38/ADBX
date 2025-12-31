@@ -2,7 +2,6 @@
 
 require_relative 'packages'
 require_relative 'ruby_utils'
-require 'open3'
 
 class DisplayScale
   def self.name

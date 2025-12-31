@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 class DemoMode
   def self.name
     'demo_mode'

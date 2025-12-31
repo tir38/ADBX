@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 # returns list of packages as array
 def all_packages
   stdout_str, = Open3.capture2('adb shell pm list packages')
