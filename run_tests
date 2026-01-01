@@ -71,6 +71,7 @@ echo "package = com.google.android.youtube" > "$CONFIG_FILE" # add package value
 ax clear_app_data
 ax launch_app
 ax permissions
+ax version_name
 
 # Cleanup
 rm -f "$CONFIG_FILE"

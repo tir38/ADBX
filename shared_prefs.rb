@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'validate_package'
+require "optparse"
 
 class SharedPrefs
   def self.name
@@ -8,19 +9,21 @@ class SharedPrefs
   end
 
   def self.perform(*args)
-    subcommand = args[0]
+    cli_package_name = nil
+    options = OptionParser.new do |option|
+      # find package name from optional
+      option.on("--package PACKAGE", "Package name") { |value| cli_package_name = value }
+    end
+
+    orderedArguments = options.parse(args)
+    subcommand = orderedArguments.shift
+    file_name  = orderedArguments.shift
+    pref_name  = orderedArguments.shift
+
     return unless validate_sub_command(subcommand)
 
-    package_name = args[1]
-    #package_name = get_package(args[1])
-    # TODO this  function can't check for package from configs
-    # if user leaves off the package then other args are out of orderd
-    # and everything breaks, figure out how to fix this
+    package_name = get_package(cli_package_name)
     return unless validate_package(package_name)
-
-    # don't validate these until we need them; they don't need to be supplied for all subcommands
-    file_name = args[2]
-    pref_name = args[3]
 
     file_name_present = !file_name.nil? && !file_name.empty?
 
@@ -47,6 +50,13 @@ class SharedPrefs
       end
 
     when 'remove'
+      if !file_name_present
+        puts 'Failed to supply file name'
+        return
+      end
+
+      full_file_path = "/data/data/#{package_name}/shared_prefs/#{file_name}"
+      puts "about to remove package #{package_name}, full file path #{full_file_path}, file name #{file_name}, filename present #{file_name_present}\n\n"
       return unless validate_file_exists(package_name, full_file_path, file_name)
       return unless validate_pref_name(pref_name)
 

@@ -9,7 +9,14 @@ class Permissions
   end
 
   def self.perform(*args)
-    package = get_package(args[0])
+    cli_package_name = nil
+    options = OptionParser.new do |option|
+      # find package name from optional
+      option.on("--package PACKAGE", "Package name") { |value| cli_package_name = value }
+    end
+    options.parse(args)
+
+    package = get_package(cli_package_name)
     return unless validate_package(package)
 
     base_shell = %(adb shell dumpsys package #{package})
