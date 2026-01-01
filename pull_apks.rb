@@ -8,11 +8,15 @@ class PullApks
   end
 
   def self.perform(*args)
-    #package = get_package(args[0])
-    # TODO this  function can't check for package from configs
-    # if user leaves off the package then down below "destination"
-    # becomes arg 0 and everything breaks, figure out how to fix this
-    package = args[0]
+    cli_package_name = nil
+    options = OptionParser.new do |option|
+      # find package name from optional
+      option.on("--package PACKAGE", "Package name") { |value| cli_package_name = value }
+    end
+
+    orderedArguments = options.parse(args)
+
+    package = get_package(cli_package_name)
     return unless validate_package(package)
 
     stdout_str, = Open3.capture2("adb shell pm path #{package}")
@@ -22,7 +26,9 @@ class PullApks
       row.sub('package:', '')
     end
 
-    destination = args[1]
+    destination = orderedArguments.shift
+
+    puts "Pulling apk(s) for #{package}"
     locations.each do |location|
       Open3.capture2("adb pull #{location} #{destination}")
     end

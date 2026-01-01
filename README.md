@@ -46,7 +46,7 @@ Sets airplane mode to on or off. Non-rooted devices will require a reboot.
 
 Sets window animation scale, transition animation scale, and animator duration scale.
 
-### `ax clear_app_data PACKAGE`
+### `ax clear_app_data --package PACKAGE`
 
 Clear all app data, including cache and accepted permissions
 
@@ -79,7 +79,7 @@ Set display scale. Mimics small, default, large, larger, largest options as if s
 
 Set accessibility font scale. Mimics small, default, large, largest options as if set from system Settings app.
 
-### `ax launch_app PACKAGE`
+### `ax launch_app --package PACKAGE`
 
 Launch an app by package name
 
@@ -99,7 +99,7 @@ Set screen to maximum brightness
 
 Set device night mode (aka dark mode) on, off, or auto. auto will "automatically switches [night mode] based on the device current location and certain other sensors"
 
-### `ax permissions PACKAGE`
+### `ax permissions --package PACKAGE`
 
 List entire `dumpsys` for a package, with highlighting for <span style="color:green">granted</span> and <span style="color:red">not granted</span> permissions:
 
@@ -109,7 +109,7 @@ List entire `dumpsys` for a package, with highlighting for <span style="color:gr
 
 Print information on device's processor(s)
 
-### `ax pull_apks PACKAGE LOCATION`
+### `ax pull_apks LOCATION --package PACKAGE`
 
 Pull all apks from device to local machine, for a given package. Optionally set location on local machine
 
@@ -125,27 +125,27 @@ Capture a device screenshot, saving to optional destination, or current director
 
 Launch system Settings app
 
-### `ax shared_prefs list PACKAGE`
+### `ax shared_prefs list --package PACKAGE`
 
 List all shared preferences files within a package
 
-### `ax shared_prefs list PACKAGE FILE_NAME`
+### `ax shared_prefs list FILE_NAME --package PACKAGE`
 
-Print the content of a single shared preferences file within a single package
+Print the content of a single shared preferences file within a package
 
-### `ax shared_prefs remove PACKAGE FILE_NAME PREF_NAME`
+### `ax shared_prefs remove FILE_NAME PREF_NAME --package PACKAGE`
 
-Remove a single value from a shared preferences file
+Remove a single value from a shared preferences file within a package
 
 ### `ax talkback on|off`
 
 Set Talkback on or off
 
-### `ax uninstall_package PACKAGE`
+### `ax uninstall_package --package PACKAGE`
 
 Uninstalls package by name
 
-### `ax version_name PACKAGE`
+### `ax version_name --package PACKAGE`
 
 Print package's [version name](https://developer.android.com/guide/topics/manifest/manifest-element#vname)
 
@@ -153,7 +153,7 @@ Print package's [version name](https://developer.android.com/guide/topics/manife
 
 ADBX supports a standard `adbx.config` file. ADBX will search up the directory tree from the call point and apply configs as found. See `adbx.config.example`
 
-* `package` - For all commands that require a PACKAGE agumenet, it can be ommited if a package is defined in the config
+* `package` - For all commands that require a `--package` agumenet, it can be ommited if a package is defined in the config
 
 ## Setup
 
