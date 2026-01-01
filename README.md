@@ -149,6 +149,12 @@ Uninstalls package by name
 
 Print package's [version name](https://developer.android.com/guide/topics/manifest/manifest-element#vname)
 
+## Configs
+
+ADBX supports a standard `adbx.config` file. ADBX will search up the directory tree from the call point and apply configs as found. See `adbx.config.example`
+
+* `package` - For all commands that require a PACKAGE agumenet, it can be ommited if a package is defined in the config
+
 ## Setup
 
 These scripts run as ruby commands. Install latest ruby 3.x. Known working versions:
@@ -187,3 +193,35 @@ source path/to/ADBX/ax_completion.bash
 2. open new terminal window
 3. `$ ax [TAB]`
 4. see list of completable actions
+
+## Developer Setup
+
+To ensure code quality, a pre-push hook should be added:
+
+```bash
+#!/bin/bash
+
+# Run rubocop before pushing
+echo "Running rubocop..."
+rubocop
+
+# Check if rubocop passed
+if [ $? -ne 0 ]; then
+  echo "Rubocop checks failed. Aborting push."
+  exit 1
+fi
+
+echo "Rubocop checks passed."
+
+# Run tests before pushing
+echo "Running tests..."
+ruby tests/find_configs_test.rb
+
+# Check if tests passed
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Aborting push."
+  exit 1
+fi
+
+echo "All tests passed. Proceeding with push."
+```
