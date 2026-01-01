@@ -8,6 +8,10 @@ class PullApks
   end
 
   def self.perform(*args)
+    #package = get_package(args[0])
+    # TODO this  function can't check for package from configs
+    # if user leaves off the package then down below "destination"
+    # becomes arg 0 and everything breaks, figure out how to fix this
     package = args[0]
     return unless validate_package(package)
 

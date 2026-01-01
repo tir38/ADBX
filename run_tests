@@ -61,3 +61,16 @@ sleep 3
 ax airplane_mode off
 sleep 3
 ax reboot
+
+# test functions that use package but with config, that can be easily tested
+printf "\n\n=== Testing pulling package from config: ====== \n\n"
+
+CONFIG_FILE="adbx.config" # Create temp config
+echo "package = com.google.android.youtube" > "$CONFIG_FILE" # add package value
+
+ax clear_app_data
+ax launch_app
+ax permissions
+
+# Cleanup
+rm -f "$CONFIG_FILE"
