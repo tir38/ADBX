@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'validate_package'
+require_relative 'find_config'
 
 class LaunchApp
   def self.name
@@ -8,7 +9,7 @@ class LaunchApp
   end
 
   def self.perform(*args)
-    package_name = args[0]
+    package_name = get_package(args[0]) # optionally supplied from user when calling CLI
     return unless validate_package(package_name)
 
     # https://developer.android.com/studio/test/other-testing-tools/monkey

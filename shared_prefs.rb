@@ -12,6 +12,10 @@ class SharedPrefs
     return unless validate_sub_command(subcommand)
 
     package_name = args[1]
+    #package_name = get_package(args[1])
+    # TODO this  function can't check for package from configs
+    # if user leaves off the package then other args are out of orderd
+    # and everything breaks, figure out how to fix this
     return unless validate_package(package_name)
 
     # don't validate these until we need them; they don't need to be supplied for all subcommands

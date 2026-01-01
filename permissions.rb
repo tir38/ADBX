@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'validate_package'
+require_relative 'find_config'
 
 class Permissions
   def self.name
@@ -8,7 +9,7 @@ class Permissions
   end
 
   def self.perform(*args)
-    package = args[0]
+    package = get_package(args[0])
     return unless validate_package(package)
 
     base_shell = %(adb shell dumpsys package #{package})
