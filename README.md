@@ -155,17 +155,31 @@ ADBX supports a standard `adbx.config` file. ADBX will search up the directory t
 
 * `package` - For all commands that require a `--package` agumenet, it can be ommited if a package is defined in the config
 
-## Setup
+## Install
 
+
+#### Via Brew
+
+```
+brew tap tir38/tap
+brew install adbx
+````
+
+then add the following to `~/.bash_profile`:
+
+```
+[[ -r "#{etc}/profile.d/bash_completion.sh" ]] && . "#{etc}/profile.d/bash_completion.sh"
+````
+
+
+## Manual Install
 These scripts run as ruby commands. Install latest ruby 3.x. Known working versions:
 
 * Ruby 3.4.1
 
-## Setup tab completion
+### MacOS pre-steps
 
 ADBX relies on Bash Completion 2. Read more about why [here](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
-
-#### MacOS pre-steps
 
 1. update to latest Bash (4+): [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
 2. install `bash-complete@2` [read more](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
@@ -181,7 +195,7 @@ export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 ```
 
-#### for all machines
+### For all machines
 
 1. source both `ax` command and completion script. Add to `~/.bashrc`:
 
