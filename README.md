@@ -2,6 +2,8 @@
 
 ADB commands are not always intuitive. They are also not easy to remember. There is also a lot of bad advice out there. ADBX hopes to solve that.
 
+Supports macOS and Linux (Ubuntu/Debian).
+
 
 ## Objectives
 
@@ -157,56 +159,72 @@ ADBX supports a standard `adbx.config` file. ADBX will search up the directory t
 
 ## Install
 
+These scripts run as ruby commands. Install latest ruby 3.x. Known working versions:
+
+* Ruby 3.4.1
+
+### macOS
 
 #### Via Brew
 
 ```
 brew tap tir38/tap
 brew install adbx
-````
+```
 
 then add the following to `~/.bash_profile`:
 
 ```
 [[ -r "#{etc}/profile.d/bash_completion.sh" ]] && . "#{etc}/profile.d/bash_completion.sh"
-````
+```
 
-
-## Manual Install
-These scripts run as ruby commands. Install latest ruby 3.x. Known working versions:
-
-* Ruby 3.4.1
-
-### MacOS pre-steps
+#### Manual Install
 
 ADBX relies on Bash Completion 2. Read more about why [here](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
-1. update to latest Bash (4+): [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
-2. install `bash-complete@2` [read more](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
+1. Update to latest Bash (4+): [directions here](https://medium.com/@weibeld/upgrading-bash-on-macos-7138bd1066ba)
+2. Install `bash-completion@2`: [read more](https://itnext.io/programmable-completion-for-bash-on-macos-f81a0103080b)
 
 ```
 $ brew install bash-completion@2
 ```
 
-3. update `~/.bashrc` by adding
+3. Add to `~/.bashrc`:
 
 ```
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 ```
 
-### For all machines
-
-1. source both `ax` command and completion script. Add to `~/.bashrc`:
+4. Add the `ax` command and completion script to `~/.bashrc`:
 
 ```
 export PATH=$PATH:path/to/ADBX
 source path/to/ADBX/ax_completion.bash
 ```
 
-2. open new terminal window
-3. `$ ax [TAB]`
-4. see list of completable actions
+5. Open a new terminal window
+6. `$ ax [TAB]`
+7. See list of completable actions
+
+### Linux (Ubuntu/Debian)
+
+1. Install bash-completion if not already present:
+
+```
+$ sudo apt install bash-completion
+```
+
+2. Add the `ax` command and completion script to `~/.bashrc`:
+
+```
+export PATH=$PATH:path/to/ADBX
+source path/to/ADBX/ax_completion.bash
+```
+
+3. Open a new terminal window
+4. `$ ax [TAB]`
+5. See list of completable actions
 
 ## Developer Setup
 
